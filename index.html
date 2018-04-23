@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.bootcss.com/normalize/8.0.0/normalize.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Document</title>
+  <style>
+  #div1{width:100px;height: 30px;}
+  </style>
+  <script src="./js/main.js"></script>
+  <script>
+  window.onload = function()
+  {
+    var odiv2 = document.getElementById('div1');
+    var oDiv = document.getElementById('wal');
+    var obtn1 = document.getElementById('obtn');
+    var obtn2 = document.getElementById('ibtn');
+    var oTx = document.getElementById('inp');
+    obtn1.onclick=function(){
+      var op = document.createElement('p');
+      op.innerHTML = oTx.value;
+      oDiv.appendChild(op);
+      oTx.value = '';
+      startMove(op,{width:30},function(){oDiv.removeChild(op)});
+    };
+
+
+    obtn2.onclick = function(){
+      var opp = document.getElementsByTagName('p');
+      var j = opp.length;
+      for(var i = 0 ; i < j ; i++)
+      {
+        oDiv.removeChild(opp[0]);
+      }
+    }
+  };
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div id="wal" class="wall">
+    </div>
+    <div class="text">
+      <p>
+      <input id="inp" class="s_txt" type="text" name="" value="" placeholder="说点什么？">
+      </p>
+    </div>
+    <div>
+      <button id="obtn" class="btn1">发射</button>
+      <button id="ibtn" class="btn2">清屏</button>
+    </div>
+  </div>
+  <div id="div1"></div>
+</body>
+
+</html>

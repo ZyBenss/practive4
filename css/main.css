@@ -1,0 +1,50 @@
+body{
+  background: white;
+}
+
+
+
+.wall{
+  border: 1px solid red;
+  width: 1480px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.wall p{
+  text-align: right;
+}
+
+input{
+    width: 388px;
+    height: 34px;
+    border-radius: 3px;
+    border: 1px solid #eee;
+    padding-left: 10px;
+}
+
+.container{
+  display: block;
+  margin: 0 auto;
+  max-width: 1920px;
+  text-align: center;
+}
+.btn1{
+  border: 1px solid rgb(233, 86, 35);
+  background: white;
+  color: rgb(233, 86, 35);
+  border-radius: 3px;
+  width: 150px;
+  height: 35px;
+}
+.btn2
+{
+  border: 1px solid rgb(145, 166, 173);
+  background: white;
+  color: rgb(145, 166, 173);
+  border-radius: 3px;
+  width: 150px;
+  height: 35px;
+}
